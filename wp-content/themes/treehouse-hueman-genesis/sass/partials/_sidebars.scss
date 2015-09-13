@@ -1,0 +1,111 @@
+/*  base : sidebar
+/* ------------------------------------ */
+
+.sidebar {
+	padding-bottom: 20px;
+	position: relative;
+	z-index: 2;
+	.pad {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.sidebar-top {
+	padding: 15px 30px;
+	p {
+		float: left;
+		color: #fff;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 24px;
+		padding: 3px 0;
+	}
+}
+
+.sidebar-toggle {
+	display: none;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+	height: 50px;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+	i {
+		font-size: 38px;
+		color: #fff;
+		padding: 5px 0;
+	}
+}
+
+.s1-expand .s1, .s2-expand .s2 {
+	-moz-transition: width .2s ease;
+	-webkit-transition: width .2s ease;
+	transition: width .2s ease;
+}
+
+/* toggle icon */
+
+.icon-sidebar-toggle:before {
+	font-family: FontAwesome;
+}
+
+.col-2cl .s1 .icon-sidebar-toggle:before, .col-3cl .s1 .icon-sidebar-toggle:before, .col-3cm .s2 .icon-sidebar-toggle:before, .col-3cl .s2 .icon-sidebar-toggle:before {
+	content: "\f100";
+}
+
+.col-2cr .s1 .icon-sidebar-toggle:before, .col-3cm .s1 .icon-sidebar-toggle:before {
+	content: "\f101";
+}
+
+.col-3cr {
+	.s1 .icon-sidebar-toggle:before, .s2 .icon-sidebar-toggle:before {
+		content: "\f101";
+	}
+}
+
+/* sidebar primary */
+
+.s1 {
+	width: 340px;
+	z-index: 2;
+	&:hover {
+		z-index: 98;
+		/* social icons tooltip above header nav */
+	}
+	.sidebar-top, .sidebar-toggle {
+		background: #3b8dbd;
+	}
+}
+
+@media only screen and (min-width: 479px) and (max-width: 960px) {
+	.s1 .sidebar-top {
+		background: none !important;
+		border-bottom: 1px solid #ddd;
+		p, .social-links .social-tooltip {
+			color: #666;
+		}
+	}
+}
+
+/* sidebar secondary */
+
+.s2 {
+	width: 260px;
+	z-index: 1;
+	.sidebar-top, .sidebar-toggle {
+		background: #82b965;
+	}
+}
+
+@media only screen and (min-width: 479px) and (max-width: 1200px) {
+	.s2 .sidebar-top {
+		background: none !important;
+		border-bottom: 1px solid #ddd;
+		p {
+			color: #666;
+		}
+	}
+}

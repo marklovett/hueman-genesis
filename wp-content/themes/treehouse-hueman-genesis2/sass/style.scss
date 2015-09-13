@@ -1,0 +1,55 @@
+/*
+Theme Name: Treehouse Hueman for Genesis
+Theme URI: http://www.teamtreehouse.com
+Version: 1.0.0
+Description: Treehouse Hueman for Genesis is a responsive theme for blogs and magazines converted to use with the <a href="http://bit.ly/the-genesis-framework">Genesis Framework</a>. Inspired by Hueman, it brings the layout and basic features to the Genesis Framework.
+Author: Jesse Petersen
+Author URI: http://www.petersenmediagroup.com
+
+Template: genesis
+Template Version: 2.1.2
+Tags: responsive-layout, custom-menu, full-width-template
+
+  Current Copyright: (c) 2015 Treehouse, LLC
+  License: GNU General Public License v3.0
+  License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+ 	Source Author: Alexander Agnarson
+	Source Author URI: http://alxmedia.se
+ 	Source Copyright: (c) 2013 Alexander "Alx" Agnarson
+*/
+
+/* # Table of Contents
+- HTML5 Reset
+- Defaults
+- Structure and Layout
+- Common Classes
+- Widgets
+- Plugins
+- Site Header
+- Site Navigation
+- Content Area
+- Sidebars
+- Footer Widgets
+- Site Footer
+- Media Queries
+*/
+
+@import "partials/_variables.scss";
+@import "partials/_colors.scss";
+@import "partials/_mixins.scss";
+
+@import "partials/_reset.scss";
+@import "partials/_defaults.scss";
+
+@import "partials/_structure-layout.scss";
+@import "partials/_common-classes.scss";
+@import "partials/_widgets.scss";
+@import "partials/_plugins.scss";
+@import "partials/_site-header.scss";
+@import "partials/_site-navigation.scss";
+@import "partials/_content-area.scss";
+@import "partials/_sidebars.scss";
+@import "partials/_footer-widgets.scss";
+@import "partials/_site-footer.scss";
+@import "partials/_media-queries.scss";
