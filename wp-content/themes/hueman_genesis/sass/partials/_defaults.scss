@@ -173,69 +173,37 @@ body {
 /*  base : forms
 /* ------------------------------------ */
 
-input, textarea, button, select, label {
-	font-family: inherit;
+
+button, textarea {
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 0;
+	border-radius: 0;
 }
 
-.themeform {
-	input, textarea, button, select, label {
-		font-size: 14px;
+input, textarea, button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-moz-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+input {
+	&[type="checkbox"] {
+		-moz-appearance: checkbox;
+		-webkit-appearance: checkbox;
 	}
-	input::-moz-focus-inner, button::-moz-focus-inner {
-		border: 0;
-		padding: 0;
+	&[type="radio"] {
+		-moz-appearance: radio;
+		-webkit-appearance: radio;
 	}
-	input {
-		&[type="text"], &[type="password"], &[type="email"], &[type="submit"] {
-			margin: 0;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			-webkit-border-radius: 0;
-			border-radius: 0;
-		}
-	}
-	button, textarea {
-		margin: 0;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		-webkit-border-radius: 0;
-		border-radius: 0;
-	}
-	input, textarea, button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-moz-transition: all .2s ease;
-		-webkit-transition: all .2s ease;
-		transition: all .2s ease;
-	}
-	input {
-		&[type="checkbox"] {
-			-moz-appearance: checkbox;
-			-webkit-appearance: checkbox;
-		}
-		&[type="radio"] {
-			-moz-appearance: radio;
-			-webkit-appearance: radio;
-		}
-	}
-	label {
-		font-weight: 600;
-		color: #444;
-	}
-	input {
-		&[type="text"], &[type="password"], &[type="email"] {
-			background: #fff;
-			border: 2px solid #ddd;
-			color: #777;
-			display: block;
-			max-width: 100%;
-			outline: none;
-			padding: 7px 8px;
-		}
-	}
-	textarea {
+}
+
+input {
+	&[type="text"], &[type="password"], &[type="email"] {
 		background: #fff;
 		border: 2px solid #ddd;
 		color: #777;
@@ -244,55 +212,98 @@ input, textarea, button, select, label {
 		outline: none;
 		padding: 7px 8px;
 	}
-	input {
-		&[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus {
-			border-color: #ccc;
-			color: #444;
-			-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-			box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-		}
+}
+
+input {
+	&[type="text"], &[type="password"], &[type="email"], &[type="submit"] {
+		margin: 0;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-border-radius: 0;
+		border-radius: 0;
 	}
-	textarea:focus {
+}
+
+input, textarea, button, select, label {
+	font-family: inherit;
+	font-size: 14px;
+}
+
+
+input::-moz-focus-inner, button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+label {
+	font-weight: 600;
+	color: #444;
+}
+
+textarea {
+	background: #fff;
+	border: 2px solid #ddd;
+	color: #777;
+	display: block;
+	max-width: 100%;
+	outline: none;
+	padding: 7px 8px;
+}
+
+input {
+	&[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus {
 		border-color: #ccc;
 		color: #444;
 		-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 		box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	}
-	label .required {
-		color: #3b8dbd;
+}
+textarea:focus {
+	border-color: #ccc;
+	color: #444;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+label .required {
+	color: #3b8dbd;
+}
+
+input[type="submit"], button[type="submit"] {
+	background: #3b8dbd;
+	color: #fff;
+	padding: 8px 14px;
+	font-weight: 600;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+	background: #444;
+}
+
+&.searchform div {
+	position: relative;
+	input {
+		padding-left: 26px;
+		line-height: 20px;
 	}
-	input[type="submit"], button[type="submit"] {
-		background: #3b8dbd;
-		color: #fff;
-		padding: 8px 14px;
-		font-weight: 600;
-		display: inline-block;
-		border: none;
-		cursor: pointer;
-		-webkit-border-radius: 3px;
-		border-radius: 3px;
-	}
-	input[type="submit"]:hover, button[type="submit"]:hover {
-		background: #444;
-	}
-	&.searchform div {
-		position: relative;
-		input {
-			padding-left: 26px;
-			line-height: 20px;
-		}
-		&:after {
-			color: #ccc;
-			line-height: 24px;
-			font-size: 14px;
-			content: "\f002";
-			position: absolute;
-			left: 10px;
-			top: 6px;
-			font-family: FontAwesome;
-		}
+	&:after {
+		color: #ccc;
+		line-height: 24px;
+		font-size: 14px;
+		content: "\f002";
+		position: absolute;
+		left: 10px;
+		top: 6px;
+		font-family: FontAwesome;
 	}
 }
+
 
 /*  base : entry
 /* ------------------------------------ */
