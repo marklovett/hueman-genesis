@@ -15,3 +15,16 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+//* Register widget areas
+genesis_register_sidebar( array(
+	'id'          => 'home-top',
+	'name'        => __( 'Home Top', 'hueman-genesis' ),
+	'description' => __( 'This is the first section of the home page.', 'hueman-genesis' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'home-bottom',
+	'name'        => __( 'Home Bottom', 'hueman-genesis' ),
+	'description' => __( 'This is the second section of the home page.', 'hueman-genesis' ),
+) );
