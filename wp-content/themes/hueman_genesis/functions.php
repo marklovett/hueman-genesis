@@ -19,7 +19,7 @@ function hueman_scripts_styles() {
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), 'hueman-genesis' );
 }
 
-//* Add support for structural wraps
+//* Add support for structural wraps-adds wraps to .site-header and .site-inner
 add_theme_support( 'genesis-structural-wraps', array(
 	'header', 'nav', 'subnav', 'main', 'footer-widgets', 'footer',
 ) );
@@ -30,10 +30,25 @@ add_theme_support( 'genesis-menus', array(
 	'secondary' => __( 'Header Bottom Navigation Menu', 'hueman-genesis' )
 ) );
 
+//* Relocate Primary (top) Navigation
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_before', 'genesis_do_nav', 4 );
+
+//* Relocate Header outside Site Container
+remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
+remove_action( 'genesis_header', 'genesis_do_header' );
+remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+add_action( 'genesis_before', 'genesis_header_markup_open', 5 );
+add_action( 'genesis_before', 'genesis_do_header' );
+add_action( 'genesis_before', 'genesis_header_markup_close', 15 );
+
+//* Relocate Secondary (bottom) Navigation
+remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+add_action( 'genesis_before', 'genesis_do_subnav', 14 );
+
 //* Add new feature image sizes
 add_image_size( 'home-top', 780, 354, TRUE );
 add_image_size( 'home-middle', 375, 175, TRUE );
-
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );

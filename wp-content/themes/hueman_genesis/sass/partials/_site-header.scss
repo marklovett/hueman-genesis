@@ -2,16 +2,25 @@
  *  Section: Header
 /* ------------------------------------------------------------------------- */
 
-#header {
+.site-header {
 	background: #33363b;
 	position: relative;
 	padding-bottom: 60px;
-	.pad {
-		padding-top: 30px;
-		padding-bottom: 30px;
+	
+	.wrap {
+		max-width: 1380px;
+		margin: 0 auto;
 	}
-	.container-inner {
+
+	.title-area {
+		padding: 30px;
 		position: relative;
+		display: table;
+	}
+	.h2 {
+		&.site-description {
+			font-weight: 300;
+		}
 	}
 }
 
@@ -21,6 +30,7 @@
 	letter-spacing: -0.5px;
 	float: left;
 	line-height: 60px;
+	margin: 0;
 	padding: 10px 0;
 	a {
 		display: block;
