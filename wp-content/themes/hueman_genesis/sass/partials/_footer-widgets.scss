@@ -1,0 +1,50 @@
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	background: #FFF none repeat scroll 0% 0%;
+	color: $color-footer-widget;
+	width: 100%;
+	clear: both;
+	.wrap {
+		max-width: $site-max-width;
+		padding: 50px 40px 60px;
+		margin: 0px auto;
+	}
+	a {
+		color: $color-widget-link;
+	}
+	&.button {
+
+	}
+	:hover {
+
+	}
+	img {
+		width: 80px;
+		height: 80px;
+		margin-right: 10px;
+	}
+	.widget-area {
+		float: left;
+		width: 30%;
+		margin-left: 5%;
+		&:first-child {
+			margin-left: 0px;
+		}
+		.widget {
+			margin-top: 40px;
+			width: 100%;
+			&:first-child {
+				margin-top: 0px;
+			}
+			h2.entry-title {
+				font-size: 15px;
+			}
+		}
+	}
+	ul li {
+		padding: 10px 0px;
+		border-bottom: 1px solid #E4E4E4;
+	}
+}

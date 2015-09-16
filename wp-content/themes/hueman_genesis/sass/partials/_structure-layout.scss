@@ -11,7 +11,7 @@
 }
 
 .site-inner {
-	max-width: 1380px;
+	max-width: $site-max-width;
 	background-color: #f0f0f0;
 	margin: -60px auto 0;
 	padding: 0 20px;
@@ -32,13 +32,11 @@
 	float: right;
 }
 
-
-
 /* boxed */
 
 .boxed {
 	#wrapper {
-		max-width: 1380px;
+		max-width: $site-max-width;
 		margin: 0 auto;
 		-webkit-box-shadow: 6px 0 0 rgba(0, 0, 0, 0.04), -6px 0 0 rgba(0, 0, 0, 0.04);
 		box-shadow: 6px 0 0 rgba(0, 0, 0, 0.04), -6px 0 0 rgba(0, 0, 0, 0.04);
@@ -55,41 +53,8 @@
 /*  base : layout columns
 /* ------------------------------------ */
 
-/* 2 column, content left */
-
-.col-2cl {
-	.main-inner {
-		background: url(img/sidebar/s-right-s1.png) repeat-y right 0;
-		padding-right: 340px;
-	}
-	.s1 {
-		float: right;
-		margin-right: -340px;
-	}
-	.content {
-		float: left;
-	}
-}
-
-/* 2 column, content right */
-
-.col-2cr {
-	.main-inner {
-		background: url(img/sidebar/s-left.png) repeat-y left 0;
-		padding-left: 340px;
-	}
-	.s1 {
-		float: left;
-		margin-left: -340px;
-	}
-	.content {
-		float: right;
-	}
-}
-
 /* 3 column, content middle */
 
-.col-3cm {
 	.main {
 		background: url(img/sidebar/s-right-s2.png) repeat-y right 0;
 	}
@@ -98,11 +63,11 @@
 		padding-left: 340px;
 		padding-right: 260px;
 	}
-	.s1 {
+	.sidebar-primary {
 		float: left;
 		margin-left: -340px;
 	}
-	.s2 {
+	.sidebar-secondary {
 		float: right;
 		margin-right: -260px;
 		/* ingenuity! */
@@ -112,53 +77,7 @@
 	.content {
 		float: right;
 	}
-}
 
-/* 3 column, content left */
-
-.col-3cl {
-	.main {
-		background-image: none;
-	}
-	.main-inner {
-		background: url(img/sidebar/s-right-dual-full-expand.png) repeat-y right 0;
-		padding-right: 600px;
-	}
-	.s1 {
-		float: right;
-		margin-right: -600px;
-	}
-	.s2 {
-		float: right;
-		margin-right: -260px;
-	}
-	.content {
-		float: left;
-	}
-}
-
-/* 3 column, content right */
-
-.col-3cr {
-	.main {
-		background-image: none;
-	}
-	.main-inner {
-		background: url(img/sidebar/s-left-dual-full-expand.png) repeat-y left 0;
-		padding-left: 600px;
-	}
-	.s1 {
-		float: left;
-		margin-left: -600px;
-	}
-	.s2 {
-		float: left;
-		margin-left: -260px;
-	}
-	.content {
-		float: right;
-	}
-}
 
 /*  base : grid
 /* ------------------------------------ */
