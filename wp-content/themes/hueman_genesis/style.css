@@ -1016,37 +1016,174 @@ h1, h2, h3, h4, h5, h6 {
 .four-fifth {
   width: 79.4%; }
 
-/* ------------------------------------------------------------------------- *
- *  Common Elements
-/* ------------------------------------------------------------------------- */
-/*  common : responsive videos
-/* ------------------------------------ */
-/* line 8, sass/partials/_common-classes.scss */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden; }
-  /* line 13, sass/partials/_common-classes.scss */
-  .video-container iframe, .video-container object, .video-container embed, .video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+/* # Common Classes
+---------------------------------------------------------------------------------------------------- */
+/* ## Avatar
+--------------------------------------------- */
+/* line 7, sass/partials/_common-classes.scss */
+.avatar {
+  float: left; }
 
-/*  common : responsive image + caption
-/* ------------------------------------ */
-/* line 25, sass/partials/_common-classes.scss */
-.image-container {
+/* line 11, sass/partials/_common-classes.scss */
+.alignleft .avatar, .author-box .avatar {
+  margin-right: 24px; }
+
+/* line 15, sass/partials/_common-classes.scss */
+.alignright .avatar {
+  margin-left: 24px; }
+
+/* line 19, sass/partials/_common-classes.scss */
+.comment .avatar {
+  margin: 0 16px 24px 0; }
+
+/* ## Genesis
+--------------------------------------------- */
+/* line 26, sass/partials/_common-classes.scss */
+.breadcrumb {
+  margin-bottom: 20px; }
+
+/* line 30, sass/partials/_common-classes.scss */
+.archive-description, .author-box {
+  background-color: #fff;
+  font-size: 16px;
+  margin-bottom: 40px;
+  padding: 40px; }
+
+/* line 37, sass/partials/_common-classes.scss */
+.author-box-title {
+  font-size: 16px;
+  margin-bottom: 4px; }
+
+/* line 42, sass/partials/_common-classes.scss */
+.archive-description p:last-child, .author-box p:last-child {
+  margin-bottom: 0; }
+
+/* ## Search Form
+--------------------------------------------- */
+/* line 49, sass/partials/_common-classes.scss */
+.search-form {
+  overflow: hidden;
   position: relative; }
-  /* line 27, sass/partials/_common-classes.scss */
-  .image-container img {
-    display: block;
-    width: 100%;
-    height: auto; }
+  /* line 52, sass/partials/_common-classes.scss */
+  .search-form input {
+    padding-left: 26px;
+    line-height: 20px; }
+  /* line 56, sass/partials/_common-classes.scss */
+  .search-form:after {
+    color: #ccc;
+    line-height: 24px;
+    font-size: 14px;
+    content: "\f002";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-family: FontAwesome; }
 
-/* line 34, sass/partials/_common-classes.scss */
+/* line 68, sass/partials/_common-classes.scss */
+.site-header .search-form {
+  float: right;
+  margin-top: 12px; }
+
+/* line 73, sass/partials/_common-classes.scss */
+.entry-content .search-form, .site-header .search-form {
+  width: 50%; }
+
+/* line 77, sass/partials/_common-classes.scss */
+.genesis-nav-menu .search input[type="submit"], .widget_search input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 87, sass/partials/_common-classes.scss */
+.sidebar .widget input[type="search"] {
+  width: 100%; }
+
+/* ## Titles
+--------------------------------------------- */
+/* line 94, sass/partials/_common-classes.scss */
+.archive-title {
+  font-size: 20px; }
+
+/* line 98, sass/partials/_common-classes.scss */
+.entry-title {
+  font-size: 36px; }
+  /* line 100, sass/partials/_common-classes.scss */
+  .entry-title a {
+    color: #333; }
+
+/* line 105, sass/partials/_common-classes.scss */
+.sidebar .widget-title a {
+  color: #333; }
+
+/* line 109, sass/partials/_common-classes.scss */
+.entry-title a:hover {
+  color: #e5554e; }
+
+/* line 113, sass/partials/_common-classes.scss */
+.widget-title {
+  font-size: 18px;
+  margin-bottom: 20px; }
+
+/* line 118, sass/partials/_common-classes.scss */
+.footer-widgets .widget-title {
+  color: #fff; }
+
+/* ## WordPress
+--------------------------------------------- */
+/* line 126, sass/partials/_common-classes.scss */
+a.aligncenter img {
+  display: block;
+  margin: 0 auto; }
+/* line 130, sass/partials/_common-classes.scss */
+a.alignnone {
+  display: inline-block; }
+
+/* line 135, sass/partials/_common-classes.scss */
+.alignleft {
+  float: left;
+  text-align: left; }
+
+/* line 140, sass/partials/_common-classes.scss */
+.alignright {
+  float: right;
+  text-align: right; }
+
+/* line 146, sass/partials/_common-classes.scss */
+a.alignleft, a.alignnone, a.alignright {
+  max-width: 100%; }
+
+/* line 151, sass/partials/_common-classes.scss */
+img.centered, .aligncenter {
+  display: block;
+  margin: 0 auto 24px; }
+
+/* line 156, sass/partials/_common-classes.scss */
+img.alignnone, .alignnone {
+  margin-bottom: 12px; }
+
+/* line 160, sass/partials/_common-classes.scss */
+a.alignleft, img.alignleft, .wp-caption.alignleft {
+  margin: 0 24px 24px 0; }
+
+/* line 164, sass/partials/_common-classes.scss */
+a.alignright, img.alignright, .wp-caption.alignright {
+  margin: 0 0 24px 24px; }
+
+/* line 168, sass/partials/_common-classes.scss */
+.wp-caption-text {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center; }
+
+/* line 174, sass/partials/_common-classes.scss */
+.entry-content p.wp-caption-text {
+  margin-bottom: 0; }
+
+/* line 180, sass/partials/_common-classes.scss */
 .image-caption {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -1063,67 +1200,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.03);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.03); }
 
-/*  common : social links
-/* ------------------------------------ */
-/* line 54, sass/partials/_common-classes.scss */
-.social-links {
-  float: right;
-  position: relative;
-  padding-top: 2px; }
-  /* line 58, sass/partials/_common-classes.scss */
-  .social-links li {
-    display: inline-block;
-    margin-left: 8px;
-    line-height: 16px;
-    font-size: 0; }
-    /* line 63, sass/partials/_common-classes.scss */
-    .social-links li a {
-      display: block !important;
-      position: relative;
-      text-align: center; }
-  /* line 69, sass/partials/_common-classes.scss */
-  .social-links .social-tooltip {
-    color: #fff;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 24px;
-    display: inline;
-    position: relative;
-    z-index: 98; }
-    /* line 76, sass/partials/_common-classes.scss */
-    .social-links .social-tooltip:hover {
-      color: #fff;
-      text-decoration: none; }
-      /* line 79, sass/partials/_common-classes.scss */
-      .social-links .social-tooltip:hover:after {
-        top: -36px;
-        background: #fff;
-        font-size: 14px;
-        color: #666;
-        content: attr(title);
-        display: block;
-        right: 0;
-        padding: 5px 15px;
-        position: absolute;
-        white-space: nowrap;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
-      /* line 95, sass/partials/_common-classes.scss */
-      .social-links .social-tooltip:hover:before {
-        top: -10px;
-        right: 8px;
-        border: solid;
-        border-color: #fff transparent;
-        border-width: 5px 5px 0 5px;
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 1; }
-
 /*  common : page title
 /* ------------------------------------ */
-/* line 113, sass/partials/_common-classes.scss */
+/* line 200, sass/partials/_common-classes.scss */
 .page-title {
   background: #fff;
   position: relative;
@@ -1135,386 +1214,62 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 24px; }
-  /* line 124, sass/partials/_common-classes.scss */
+  /* line 211, sass/partials/_common-classes.scss */
   .page-title a {
     color: #aaa; }
-    /* line 126, sass/partials/_common-classes.scss */
+    /* line 213, sass/partials/_common-classes.scss */
     .page-title a:hover {
       color: #444; }
-  /* line 130, sass/partials/_common-classes.scss */
+  /* line 217, sass/partials/_common-classes.scss */
   .page-title span {
     color: #aaa; }
-  /* line 133, sass/partials/_common-classes.scss */
+  /* line 220, sass/partials/_common-classes.scss */
   .page-title i {
     margin-right: 8px; }
-  /* line 136, sass/partials/_common-classes.scss */
+  /* line 223, sass/partials/_common-classes.scss */
   .page-title h1, .page-title h2, .page-title h4 {
     color: #666; }
-  /* line 139, sass/partials/_common-classes.scss */
+  /* line 226, sass/partials/_common-classes.scss */
   .page-title .meta-single li {
     float: left;
     margin-right: 14px; }
-    /* line 142, sass/partials/_common-classes.scss */
+    /* line 229, sass/partials/_common-classes.scss */
     .page-title .meta-single li.comments {
       float: right;
       margin-right: 0; }
 
-/*  common : notebox
-/* ------------------------------------ */
-/* line 152, sass/partials/_common-classes.scss */
-.notebox {
-  background: #f0f0f0;
+/* line 237, sass/partials/_common-classes.scss */
+.widget.simple-social-icons h4.widget-title {
+  float: left;
+  margin-bottom: 0px; }
+/* line 241, sass/partials/_common-classes.scss */
+.widget.simple-social-icons ul.alignright {
+  float: right;
   position: relative;
-  padding: 12px 15px;
-  color: #888;
-  margin-bottom: 30px; }
-  /* line 158, sass/partials/_common-classes.scss */
-  .notebox:before {
-    content: '';
+  padding-top: 2px; }
+  /* line 245, sass/partials/_common-classes.scss */
+  .widget.simple-social-icons ul.alignright li {
     display: inline-block;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #f1f1f1;
-    position: absolute;
-    top: -8px;
-    left: 13px; }
-  /* line 168, sass/partials/_common-classes.scss */
-  .notebox:after {
-    content: '';
-    display: inline-block;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #f1f1f1;
-    position: absolute;
-    top: -5px;
-    left: 15px; }
-  /* line 178, sass/partials/_common-classes.scss */
-  .notebox span {
-    font-weight: 600; }
-  /* line 181, sass/partials/_common-classes.scss */
-  .notebox .search-again {
-    margin-top: 10px; }
-  /* line 184, sass/partials/_common-classes.scss */
-  .notebox input[type="text"] {
-    width: 100%; }
-
-/*  common : page image
-/* ------------------------------------ */
-/* line 192, sass/partials/_common-classes.scss */
-.page-image {
-  overflow: hidden;
-  position: relative;
-  margin: 0 0 30px 0; }
-
-/* line 198, sass/partials/_common-classes.scss */
-.page-image-text {
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 100%;
-  text-align: center; }
-  /* line 204, sass/partials/_common-classes.scss */
-  .page-image-text .caption {
-    color: #fff;
-    font-size: 44px;
-    line-height: 70px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3); }
-  /* line 212, sass/partials/_common-classes.scss */
-  .page-image-text .description {
-    display: block;
-    color: #fff;
-    font-size: 15px;
-    line-height: 36px;
-    font-weight: 300; }
-    /* line 218, sass/partials/_common-classes.scss */
-    .page-image-text .description i {
-      background: rgba(0, 0, 0, 0.7);
-      opacity: 0.9;
-      font-style: normal;
-      padding: 6px 10px;
-      -webkit-border-radius: 2px;
-      border-radius: 2px; }
+    line-height: 16px;
+    font-size: 0px;
+    margin: 0px 0px 0px 8px !important; }
+    /* line 250, sass/partials/_common-classes.scss */
+    .widget.simple-social-icons ul.alignright li a {
+      display: block !important;
+      padding: 1px !important;
+      position: relative;
+      text-align: center; }
 
 /*  common : pagination
 /* ------------------------------------ */
-/* line 232, sass/partials/_common-classes.scss */
+/* line 263, sass/partials/_common-classes.scss */
 .pagination {
   margin-bottom: 15px; }
-  /* line 234, sass/partials/_common-classes.scss */
+  /* line 265, sass/partials/_common-classes.scss */
   .pagination a {
     font-size: 18px;
     font-weight: 600; }
 
-/*  common : thumb icon
-/* ------------------------------------ */
-/* line 243, sass/partials/_common-classes.scss */
-.thumb-icon {
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  text-align: center;
-  display: block;
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  -moz-transition: all 0.7s ease;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
-  /* line 265, sass/partials/_common-classes.scss */
-  .thumb-icon i {
-    font-size: 18px;
-    padding: 7px 0;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-  /* line 274, sass/partials/_common-classes.scss */
-  .thumb-icon .fa-play {
-    margin: -1px 0 0 2px; }
-  /* line 277, sass/partials/_common-classes.scss */
-  .thumb-icon.small {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px; }
-    /* line 285, sass/partials/_common-classes.scss */
-    .thumb-icon.small .fa {
-      font-size: 14px;
-      line-height: 16px;
-      padding: 5px 0; }
-    /* line 290, sass/partials/_common-classes.scss */
-    .thumb-icon.small .f-play {
-      margin: -1px 0 0 2px; }
-
-/*  common : nav
-/* ------------------------------------ */
-/* line 299, sass/partials/_common-classes.scss */
-.nav-container {
-  background: #888;
-  z-index: 99;
-  position: relative; }
-
-/* line 305, sass/partials/_common-classes.scss */
-.nav-toggle {
-  display: none;
-  background: #777;
-  cursor: pointer;
-  float: right;
-  height: 50px;
-  width: 60px;
-  color: #fff;
-  text-align: center; }
-  /* line 314, sass/partials/_common-classes.scss */
-  .nav-toggle i {
-    font-size: 29px;
-    padding: 10px 0; }
-
-/* line 320, sass/partials/_common-classes.scss */
-.nav-text {
-  display: none;
-  float: right;
-  font-size: 16px;
-  line-height: 24px;
-  padding: 13px 20px; }
-
-/* line 329, sass/partials/_common-classes.scss */
-.nav li > a:after, .nav > li > a:after {
-  font-family: FontAwesome;
-  display: inline-block; }
-
-@media only screen and (min-width: 720px) {
-  /* line 336, sass/partials/_common-classes.scss */
-  .nav-wrap {
-    height: auto !important; }
-
-  /* common */
-  /* line 340, sass/partials/_common-classes.scss */
-  .nav {
-    font-size: 0;
-    position: relative; }
-    /* line 344, sass/partials/_common-classes.scss */
-    .nav li a {
-      color: #ccc;
-      display: block;
-      line-height: 20px; }
-    /* line 349, sass/partials/_common-classes.scss */
-    .nav li > a:after {
-      content: "\f0da";
-      float: right;
-      opacity: 0.5; }
-    /* line 354, sass/partials/_common-classes.scss */
-    .nav li > a:only-child:after {
-      content: "";
-      margin: 0; }
-    /* line 359, sass/partials/_common-classes.scss */
-    .nav > li > a:after {
-      content: "\f0d7";
-      float: none;
-      margin-left: 6px;
-      font-size: 14px;
-      line-height: 1.2em; }
-
-  /* dropdown arrows */
-  /* line 370, sass/partials/_common-classes.scss */
-  #footer .nav li > a:after {
-    content: "\f0da"; }
-  /* line 373, sass/partials/_common-classes.scss */
-  #footer .nav li > a:only-child:after {
-    content: ""; }
-  /* line 377, sass/partials/_common-classes.scss */
-  #footer .nav > li > a:after {
-    content: "\f0d8"; }
-
-  /* level 1 */
-  /* line 383, sass/partials/_common-classes.scss */
-  .nav > li {
-    font-size: 16px;
-    border-right: 1px solid #999;
-    display: inline-block;
-    position: relative; }
-    /* line 388, sass/partials/_common-classes.scss */
-    .nav > li > a {
-      padding: 15px 14px; }
-      /* line 390, sass/partials/_common-classes.scss */
-      .nav > li > a:hover {
-        background: #777; }
-    /* line 394, sass/partials/_common-classes.scss */
-    .nav > li:hover > a {
-      background: #777; }
-  /* line 399, sass/partials/_common-classes.scss */
-  .nav li > a:hover, .nav li:hover > a, .nav li.current_page_item > a, .nav li.current-menu-item > a, .nav li.current-menu-ancestor > a, .nav li.current-post-parent > a {
-    color: #fff; }
-  /* line 402, sass/partials/_common-classes.scss */
-  .nav li:hover > ul {
-    display: block; }
-  /* line 406, sass/partials/_common-classes.scss */
-  .nav ul {
-    display: none;
-    background: #777;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 180px;
-    padding: 10px 0;
-    z-index: 2;
-    -webkit-transform: translateZ(0);
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15); }
-    /* line 418, sass/partials/_common-classes.scss */
-    .nav ul li {
-      font-size: 14px;
-      position: relative;
-      display: block;
-      padding: 0; }
-      /* line 423, sass/partials/_common-classes.scss */
-      .nav ul li a {
-        padding: 10px 20px; }
-      /* line 426, sass/partials/_common-classes.scss */
-      .nav ul li:last-child {
-        border-bottom: 0 !important; }
-    /* line 430, sass/partials/_common-classes.scss */
-    .nav ul ul {
-      position: absolute;
-      top: -10px;
-      left: 180px; }
-
-  /* level 2 & 3 */
-  /* level 3 */ }
-@media only screen and (max-width: 719px) {
-  /* line 442, sass/partials/_common-classes.scss */
-  .nav {
-    font-weight: 600; }
-
-  /* line 445, sass/partials/_common-classes.scss */
-  .nav-container {
-    text-transform: none; }
-
-  /* line 448, sass/partials/_common-classes.scss */
-  .nav-toggle, .nav-text {
-    display: block; }
-
-  /* line 451, sass/partials/_common-classes.scss */
-  .nav-wrap {
-    position: relative;
-    float: left;
-    width: 100%;
-    height: 0;
-    overflow: hidden; }
-    /* line 457, sass/partials/_common-classes.scss */
-    .nav-wrap.transition {
-      -webkit-transition: height 0.35s ease;
-      -moz-transition: height 0.35s ease;
-      -o-transition: height 0.35s ease;
-      transition: height 0.35s ease; }
-
-  /* line 464, sass/partials/_common-classes.scss */
-  .expand .nav-wrap {
-    height: auto; }
-
-  /* common */
-  /* line 468, sass/partials/_common-classes.scss */
-  .nav {
-    float: left;
-    width: 100%; }
-    /* line 472, sass/partials/_common-classes.scss */
-    .nav li a {
-      line-height: 20px;
-      display: block;
-      padding: 8px 20px; }
-    /* line 477, sass/partials/_common-classes.scss */
-    .nav li li a {
-      padding-left: 15px;
-      padding-right: 15px; }
-    /* line 481, sass/partials/_common-classes.scss */
-    .nav li > a:after {
-      content: '\f0d7';
-      opacity: 0.5;
-      margin-left: 6px; }
-    /* line 486, sass/partials/_common-classes.scss */
-    .nav li > a:only-child:after {
-      content: ''; }
-    /* line 489, sass/partials/_common-classes.scss */
-    .nav li > a:hover, .nav li.current_page_item > a, .nav li.current-menu-item > a, .nav li.current-post-parent > a {
-      color: #fff; }
-    /* line 493, sass/partials/_common-classes.scss */
-    .nav > li > a:after {
-      content: '\f0d7';
-      font-size: 14px; }
-    /* line 497, sass/partials/_common-classes.scss */
-    .nav > li {
-      font-size: 15px; }
-    /* line 500, sass/partials/_common-classes.scss */
-    .nav ul {
-      display: block !important;
-      margin-left: 40px; }
-      /* line 503, sass/partials/_common-classes.scss */
-      .nav ul li {
-        font-size: 13px;
-        font-weight: 300; }
-        /* line 506, sass/partials/_common-classes.scss */
-        .nav ul li a {
-          padding-top: 6px;
-          padding-bottom: 6px; }
-
-  /* dropdown arrows */
-  /* level 1 */
-  /* level 2 & 3 */ }
 /* ------------------------------------------------------------------------- *
  *  Widgets
 /* ------------------------------------------------------------------------- */
@@ -4019,50 +3774,28 @@ li #reply-title {
     /* line 83, sass/partials/_sidebars.scss */
     .sidebar-secondary .sidebar-top p {
       color: #666; } }
-/* line 90, sass/partials/_sidebars.scss */
-.widget.simple-social-icons h4.widget-title {
-  float: left;
-  margin-bottom: 0px; }
-/* line 94, sass/partials/_sidebars.scss */
-.widget.simple-social-icons ul.alignright {
-  float: right;
-  position: relative;
-  padding-top: 2px; }
-  /* line 98, sass/partials/_sidebars.scss */
-  .widget.simple-social-icons ul.alignright li {
-    display: inline-block;
-    line-height: 16px;
-    font-size: 0px;
-    margin: 0px 0px 0px 8px !important; }
-    /* line 103, sass/partials/_sidebars.scss */
-    .widget.simple-social-icons ul.alignright li a {
-      display: block !important;
-      padding: 1px !important;
-      position: relative;
-      text-align: center; }
-
-/* line 114, sass/partials/_sidebars.scss */
+/* line 92, sass/partials/_sidebars.scss */
 .widget_lsi_widget h4.widget-title {
   float: left;
   margin-bottom: 0px; }
-/* line 118, sass/partials/_sidebars.scss */
+/* line 96, sass/partials/_sidebars.scss */
 .widget_lsi_widget .lsi-social-icons {
   float: right;
   position: relative;
   padding-top: 2px; }
-  /* line 122, sass/partials/_sidebars.scss */
+  /* line 100, sass/partials/_sidebars.scss */
   .widget_lsi_widget .lsi-social-icons li {
     display: inline-block;
     line-height: 16px;
     font-size: 0px;
     margin: 0px 0px 0px 8px !important; }
-    /* line 127, sass/partials/_sidebars.scss */
+    /* line 105, sass/partials/_sidebars.scss */
     .widget_lsi_widget .lsi-social-icons li a {
       display: block !important;
       padding: 0px !important;
       position: relative;
       text-align: center; }
-      /* line 132, sass/partials/_sidebars.scss */
+      /* line 110, sass/partials/_sidebars.scss */
       .widget_lsi_widget .lsi-social-icons li a.tooltip {
         color: rgba(255, 255, 255, 0.7);
         font-size: 24px;

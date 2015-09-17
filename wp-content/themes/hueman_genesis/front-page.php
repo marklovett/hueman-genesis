@@ -1,6 +1,6 @@
 <?php
 /**
- * This file adds the Home Page to the hueman Theme.
+ * This file adds the Front Page to the hueman Theme.
  *
  * @author StudioPress
  * @package hueman
@@ -8,6 +8,12 @@
  */
  
 
+ ?>
+ 
+<h1>FRONTPAGE.PHP TEST</h1>
+
+
+<?php
 
 add_action( 'genesis_meta', 'hueman_home_genesis_meta' );
 /**
@@ -52,5 +58,11 @@ function hueman_home_widgets() {
 	
 	echo '</div>';
 }
+ ?>
+ 
+<h1>FRONTPAGE.PHP TEST</h1>
+
+
+<?php
 
 genesis();
